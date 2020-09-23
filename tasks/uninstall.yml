@@ -1,0 +1,13 @@
+---
+
+- name: Stop any existing running SQL Server service
+  service:
+      name: mssql-server
+      state: stopped
+
+- name: Install Microsoft SQL Server package
+  yum:
+    name: mssql-server
+    state: absent
+  register: uninstall
+

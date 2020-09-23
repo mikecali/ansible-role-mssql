@@ -74,7 +74,7 @@
 - name: Stop any existing running SQL Server service
   service:
       name: mssql-server
-      state: stopped
+      state: started
 
 - name: Run SQL Server setup mssql-conf 
   command: /opt/mssql/bin/mssql-conf -n setup accept-eula
