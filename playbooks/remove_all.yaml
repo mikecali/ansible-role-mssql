@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: remove all
+      include_role:
+        name: ansible-role-mssql
+        tasks_from: remove_all
