@@ -91,6 +91,11 @@
     - ~/.bash_profile
     - ~/.bashrc
 
+- name: Start SQL Server service
+  service:
+      name: mssql-server
+      state: started
+
 - name: Create symlinks
   file:
     src: "{{ item.target }}"

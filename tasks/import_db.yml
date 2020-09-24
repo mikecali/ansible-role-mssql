@@ -1,7 +1,7 @@
 ---
 - name: Import SQL File
   mssql_db:
-    name: "{{ db_name }}"
+    name: "{{ import_db_name }}"
     state: import
     target: "{{ import_file_dest }}"
     login_host: "{{ db_host }}"
